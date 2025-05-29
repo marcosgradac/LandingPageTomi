@@ -1,159 +1,166 @@
 .landing {
-    background-color: #111;
-    color: white;
-    font-family: 'Poppins', sans-serif;
+  background-color: #111;
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, #232526, #414345);
+  text-align: center;
+  padding: 0 1rem;
+
+  .hero-content {
+    animation: fadeInUp 1s ease-out;
+  }
+
+  .hero-title {
+    font-weight: bold;
+    font-size: 3rem;
+
+    @media (max-width: 600px) {
+      font-size: 2.2rem;
+    }
+  }
+
+  .hero-subtitle {
+    margin-bottom: 1.5rem;
+    color: #ccc;
+  }
+
+  .spotify-button {
+    background-color: #1DB954;
+    padding: 0.75rem 2rem;
+    font-weight: bold;
+    border-radius: 1rem;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: #1ed760;
+    }
+  }
+}
+
+.about-section {
+  padding: 4rem 1rem;
+
+  .about-avatar {
+    width: 200px;
+    height: 200px;
+    border: 4px solid #2613cf;
+  }
+
+  .about-title {
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+
+  .about-text {
+    color: #ccc;
+    line-height: 1.6;
+  }
+}
+
+.releases {
+  background-color: #1a1a1a;
+  padding: 4rem 1rem;
+
+  .releases-title {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 2rem;
+  }
+
+  .slider-container {
+    .slick-slider {
+      padding: 0 1rem;
   
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      background: linear-gradient(135deg, #232526, #414345);
-      animation: fadeIn 2s ease-in;
-  
-      h2 {
-        font-size: 3rem;
-        font-weight: bold;
-        animation: slideUp 1s ease forwards;
+      .slick-prev {
+        margin-left: 1rem;
       }
-  
-      h6 {
-        color: #ccc;
-        margin-bottom: 2rem;
+      .slick-next {
+        margin-right: 1rem;
       }
-  
-      .spotify-button {
-        background-color: #1db954;
+    }
+
+    .slider-item {
+      padding: 1rem;
+      .release-card {
+        background-color: #222;
         color: white;
-        padding: 0.8rem 2rem;
-        border-radius: 30px;
-        font-weight: bold;
-        transition: background-color 0.3s ease;
-  
+        border-radius: 1rem;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
         &:hover {
-          background-color: #1ed760;
+          transform: scale(1.05);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+        }
+
+        img {
+          object-fit: cover;
+          border-radius: 1rem 1rem 0 0;
+        }
+
+        .MuiCardContent-root {
+          text-align: center;
         }
       }
-    }
-  
-    .about {
-      padding: 6rem 2rem;
-  
-      .info {
-        max-width: 800px;
-        margin: 0 auto;
-  
-        p {
-          color: #bbb;
-        }
-  
-        .avatar {
-          border: 4px solid #1DB954;
-        }
-      }
-    }
-  
-    .releases {
-      background-color: #1a1a1a;
-      padding: 4rem 2rem;
-  
-      h4 {
-        text-align: center;
-        font-weight: bold;
-      }
-  
-      .carousel {
-        margin-top: 2rem;
-  
-        .slick-slide {
-          display: flex;
-          justify-content: center;
-        }
-  
-        .slick-dots li button:before {
-          color: #1db954;
-          font-size: 12px;
-        }
-  
-        .slick-prev, .slick-next {
-          z-index: 2;
-          color: white;
-          transition: color 0.3s;
-        }
-  
-        .slick-prev:hover, .slick-next:hover {
-          color: #1db954;
-        }
-  
-        // Ajuste para agregar espacio entre las tarjetas
-        .slick-track {
-          display: flex;
-          gap: 20px;  // Utilizamos gap para espaciar las tarjetas
-        }
-  
-        .card {
-          background-color: #222;
-          border-radius: 10px;
-          overflow: hidden;
-          transition: transform 0.4s ease, box-shadow 0.4s ease;
-          width: 100%; /* Asegura que las tarjetas ocupen todo el espacio disponible */
-          margin: 0 10px; /* Espaciado entre las tarjetas */
-  
-          &:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
-          }
-  
-          img {
-            width: 100%;
-            height: auto;
-          }
-  
-          .title {
-            padding: 1rem;
-            text-align: center;
-          }
-        }
-      }
-    }
-  
-    .socials {
-      text-align: center;
-      padding: 2rem 0;
-  
-      .MuiIconButton-root {
-        transition: transform 0.3s ease;
-  
-        &:hover {
-          transform: scale(1.2);
-        }
-      }
-    }
-  
-    .footer {
-      text-align: center;
-      padding: 1rem 0;
-      font-size: 0.8rem;
-      color: #aaa;
-      border-top: 1px solid #333;
     }
   }
-  
-  // Animaciones
-  @keyframes fadeIn {
-    from { opacity: 0 }
-    to { opacity: 1 }
+}
+
+.social {
+  text-align: center;
+  margin-top: 2rem;
+}
+.icon-tiktok {
+  img {
+    width: 45px !important;
   }
-  
-  @keyframes slideUp {
-    0% {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
+}
+.icon-youtube{
+  img {
+    width: 37px !important;
+  }
+}
+.social-icon {
+
+  img {
+    width: 30px;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+    &:hover {
+      transform: scale(1.1);
     }
   }
-  
+}
+
+
+
+.footer-divider {
+  margin-top: 1rem !important;
+  background-color: #333;
+}
+
+.footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.875rem;
+  color: #aaa;
+}
+
+// Optional: fadeIn animation
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
