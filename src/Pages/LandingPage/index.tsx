@@ -21,9 +21,10 @@ import Slider from "react-slick";
 
 export default function LandingPage() {
   const lanzamientos = [
-    { title: "Álbum Uno", img: "./images/avatar-tomi.jpeg" },
-    { title: "Single Dos", img: "https://via.placeholder.com/300x300" },
-    { title: "EP Tres", img: "https://via.placeholder.com/300x300" },
+    {  img: "./images/donde-fuimos-felices.jfif" },
+    {  img: "./images/cardiometro.jpeg" },
+    {  img: "./images/torontoooo.jfif" },
+    {  img: "./images/torontoooo.jfif" },
   ];
 
   const sliderSettings = {
@@ -43,24 +44,15 @@ export default function LandingPage() {
     <Grid className="landing">
       {/* HERO */}
       <Grid container className="hero">
-        <Fade in timeout={1000}>
-          <Grid className="hero-content">
-            <Typography variant="h2" className="hero-title" gutterBottom>
-              Tomas Tissera
-            </Typography>
-            <Typography variant="h6" className="hero-subtitle">
-              Domando Leones 2025
-            </Typography>
-            <Button
-              variant="contained"
-              href="https://open.spotify.com/intl-es/artist/75OPQenVE2uY3M2HMLz9Cx?nd=1&dlsi=6a98c5a3ad664a96"
-              target="_blank"
-              className="spotify-button"
-            >
-              Escuchá mi musica
-            </Button>
-          </Grid>
-        </Fade>
+       <Fade in timeout={1000}>
+  <Grid container className="hero-content">
+    <Grid>
+      <Typography variant="h2" className="hero-title" gutterBottom>
+        Tomas Tissera
+      </Typography>
+    </Grid>
+  </Grid>
+</Fade>
       </Grid>
 
       {/* SOBRE EL ARTISTA */}
@@ -93,12 +85,7 @@ export default function LandingPage() {
             {lanzamientos.map((item, i) => (
               <Grid key={i} className="slider-item">
                 <Card className="release-card">
-                  <CardMedia component="img" height="300px" image={item.img} alt={item.title} />
-                  <CardContent>
-                    <Typography variant="h6" textAlign="center">
-                      {item.title}
-                    </Typography>
-                  </CardContent>
+                  <CardMedia component="img" height="300px" image={item.img} />
                 </Card>
               </Grid>
             ))}

@@ -8,8 +8,9 @@
   min-height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: center;
-  background: linear-gradient(to right, #232526, #414345);
+  background-image: url("../../../public/images/portada.png");
+  background-size: cover;
+  background-position: center;
   text-align: center;
   padding: 0 1rem;
 
@@ -19,7 +20,11 @@
 
   .hero-title {
     font-weight: bold;
-    font-size: 3rem;
+    font-size: 2rem;
+    position: absolute;
+    top: 0;
+    padding-top: 1rem;
+    padding-left: 1rem;
 
     @media (max-width: 600px) {
       font-size: 2.2rem;
