@@ -18,8 +18,11 @@ import {
 } from "@mui/material";
 
 import Slider from "react-slick";
+import { useState } from "react";
+import Contact from "../../Components/CreatorContact";
 
 export default function LandingPage() {
+  const [openContact, setOpenContact] = useState(false)
   const lanzamientos = [
     {  img: "./images/donde-fuimos-felices.jfif" },
     {  img: "./images/cardiometro.jpeg" },
@@ -142,9 +145,23 @@ export default function LandingPage() {
 
       {/* FOOTER */}
       <Divider className="footer-divider" />
-      <Grid className="footer">
-        © {new Date().getFullYear()} Tomas Tissera. Sitio oficial.
-      </Grid>
-    </Grid>
+     <Grid className="footer" container direction="column" alignItems="center">
+  <Box>
+    © {new Date().getFullYear()} Tomas Tissera. Sitio oficial.
+  </Box>
+  <Box>
+    <Button
+      variant="text"
+      onClick={() => setOpenContact(true)}
+      sx={{ color: "#888", textTransform: "none", fontSize: "0.875rem" }}
+    >
+      Creador de la página web
+    </Button>
+    {openContact == true && <Contact open={openContact} onClose={() => setOpenContact(false)} />}
+  </Box>
+</Grid>
+
+</Grid>
+
   );
 }
