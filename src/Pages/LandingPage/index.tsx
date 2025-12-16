@@ -24,7 +24,7 @@ import Contact from "../../Components/CreatorContact";
 export default function LandingPage() {
   const [openContact, setOpenContact] = useState(false)
   const lanzamientos = [
-    {  img: "./images/donde-fuimos-felices.jfif" },
+    {  img: "./images/ropero.jpeg" },
     {  img: "./images/cardiometro.jpeg" },
     {  img: "./images/torontoooo.jfif" },
     {  img: "./images/torontoooo.jfif" },
@@ -47,15 +47,7 @@ export default function LandingPage() {
     <Grid className="landing">
       {/* HERO */}
       <Grid container className="hero">
-       <Fade in timeout={1000}>
-  <Grid container className="hero-content">
-    <Grid>
-      <Typography variant="h2" className="hero-title" gutterBottom>
-        Tomas Tissera
-      </Typography>
-    </Grid>
-  </Grid>
-</Fade>
+       
       </Grid>
 
       {/* SOBRE EL ARTISTA */}
@@ -81,14 +73,14 @@ export default function LandingPage() {
       {/* LANZAMIENTOS - CARRUSEL FULL WIDTH */}
       <Grid className="releases">
         <Typography variant="h4" className="releases-title" gutterBottom>
-          Últimos Lanzamientos
+          Trabajos Realizados
         </Typography>
         <Box className="slider-container">
           <Slider {...sliderSettings}>
             {lanzamientos.map((item, i) => (
               <Grid key={i} className="slider-item">
                 <Card className="release-card">
-                  <CardMedia component="img" height="300px" image={item.img} />
+                  <CardMedia component="img" height="550px" image={item.img} />
                 </Card>
               </Grid>
             ))}
@@ -99,7 +91,7 @@ export default function LandingPage() {
       {/* REDES */}
       <Grid className="social">
         <Typography variant="h5"  gutterBottom>
-          Seguime en redes
+          Contactános
         </Typography>
         <Stack direction="row" spacing={3} justifyContent="center">
         <Stack direction="row" spacing={3} justifyContent="center">

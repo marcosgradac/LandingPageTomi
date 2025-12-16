@@ -5,35 +5,22 @@
 }
 
 .hero {
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   align-items: center;
+
   background-image: url("../../../public/images/portada.png");
   background-size: cover;
-  background-position: center;
+  background-repeat: no-repeat;
+
+  /* 🔑 clave */
+  background-position: center 30%;
+
   text-align: center;
   padding: 0 1rem;
 
   .hero-content {
     animation: fadeInUp 1s ease-out;
-  }
-
-  .hero-title {
-    font-weight: bold;
-    font-size: 2rem;
-    position: absolute;
-    top: 0;
-    padding-top: 1rem;
-    padding-left: 1rem;
-
-    @media (max-width: 600px) {
-      font-size: 2.2rem;
-    }
-  }
-
-  .hero-subtitle {
-    margin-bottom: 1.5rem;
-    color: #ccc;
   }
 
   .spotify-button {
@@ -82,10 +69,11 @@
   .slider-container {
     .slick-slider {
       padding: 0 1rem;
-  
+
       .slick-prev {
         margin-left: 1rem;
       }
+
       .slick-next {
         margin-right: 1rem;
       }
@@ -93,6 +81,7 @@
 
     .slider-item {
       padding: 1rem;
+
       .release-card {
         background-color: #222;
         color: white;
@@ -121,16 +110,19 @@
   text-align: center;
   margin-top: 2rem;
 }
+
 .icon-tiktok {
   img {
     width: 45px !important;
   }
 }
-.icon-youtube{
+
+.icon-youtube {
   img {
     width: 37px !important;
   }
 }
+
 .social-icon {
 
   img {
@@ -138,6 +130,7 @@
     height: auto;
     display: block;
     transition: transform 0.3s ease;
+
     &:hover {
       transform: scale(1.1);
     }
@@ -164,6 +157,7 @@
     opacity: 0;
     transform: translateY(40px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
